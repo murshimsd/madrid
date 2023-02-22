@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Rubik', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* body {
+            position: relative;
+        } */
+
+        header {
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 60px;
+            align-items: center;
+            border-bottom: 1px solid black;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            background-color: #ffff;
+        }
+
+        .logo img {
+            height: auto;
+            width: 70px;
+        }
+
+        header .links {
+            display: flex;
+            gap: 10px;
+        }
+
+        header a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .body {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100px auto;
+            margin-top: 100px;
+        }
+
+        .available {
+            grid-area: 1/1/2/3;
+            border: 2px solid wheat;
+        }
+
+        .available img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .side {
+            grid-area: 2/1/3/2;
+        }
+
+        .main {
+            grid-area: 2/2/3/3;
+        }
+
+        .main .players {
+            display: flex;
+            height: 100%;
+        }
+
+        .players .benzema {
+            flex-grow: 8;
+        }
+
+        .players .vinic {
+            flex-grow: 8;
+        }
+
+        .players .next {
+            flex: 2;
+            align-self: center;
+            padding-right: 20px;
+        }
+        .players .next a{
+            text-decoration: none;
+        }
+
+        .players div img {
+            height: 100%;
+            width: 100%;
+        }
+        
+            .footer {
+            display: grid;
+            grid-template-columns: 20% 30% 50%;
+            grid-template-rows: 100px;
+            justify-content: center;
+            align-content: center;
+            border: 2px solid wheat;
+        }
+
+        .f1 img {
+            height: 100%;
+            width: 100%;
+            padding-left: 14px;
+        }
+
+        .f2 h2 {
+            color: rgb(196, 119, 26);
+
+        }
+
+        .f2 img {
+            height: 40px;
+            width: 40px;
+
+
+        }
+
+        .f2 table {
+            padding-top: 16px;
+            padding-left: 128px;
+        }
+
+        .f3 img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .f3 table {
+            
+            padding-left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'C:\Users\lenovo t 480s\Desktop\madrid\madrid\common\static\images\logo3.png' %}"
+                alt="">
+        </div>
+        <div class="links">
+            <a href="{% url 'common:home' %}">home</a>
+            <a href="{% url 'common:stores' %}">store</a>
+            
+            <a href="#">madridistas</a>
+            <a href="#">fixtures</a>
+        </div>
+
+    </header>
+    <div class="body">
+        <div class="available"><img src="{% static 'images/ava.gif' %}" alt=""></div>
+        <div class="side"><img src="{% static 'images/ase.png' %}" alt=""></div>
+        <div class="main">
+            <div class="players">
+                <div class="benzema"><img src="{% static 'images/ikka.png' %}" alt=""></div>
+                <div class="vinic"><img src="{% static 'images/vinic.png' %}" alt=""></div>
+                <div class="next"><a href=""><h1>next</h1></a></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer"> 
+        <div class="f1"><img src="{% static 'images/footerlogo.svg' %}" alt=""></div>
+        <div class="f2">
+            <table>
+                <tr>
+                    <th>follow us on</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'images/insta.png' %}" alt="">
+                        <img src="{% static 'images/fb.png' %}" alt="">
+                        <img src="{% static 'images/twit.png' %}" alt="">
+                        </dh>
+                </tr>
+            </table>
+        </div>
+        <div class="f3">
+            <table cellspacing="10px" cellpadding="50px">
+                <tr>
+                    <th colspan="2">
+                        <h3><u>sponsors</u></h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'images/adidas.png' %}" alt="">
+                    </td>
+                    <td> <img src="{% static 'images/emirates.png' %}" alt="">
+                    </td>
+                    
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

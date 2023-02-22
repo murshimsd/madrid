@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Rubik', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* body {
+            position: relative;
+        } */
+
+        header {
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 60px;
+            align-items: center;
+            border-bottom: 1px solid black;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            background-color: #ffff;
+        }
+
+        .logo img {
+            height: auto;
+            width: 70px;
+        }
+
+        header .links {
+            display: flex;
+            gap: 10px;
+        }
+
+        header a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        .body {
+            display: grid;
+            grid-template-columns: 238px auto auto;
+            grid-template-rows: 50% 50%;
+            margin-top: 100px;
+        }
+
+        .div1 {
+            grid-area: 1/1/3/2;
+        }
+
+        .div2 {
+            grid-area: 1/2/2/4;
+        }
+
+        .div2 img {
+            height: fit-content;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* .div3 {
+            grid-area: 1/3/2/4;
+        } */
+
+        .div3 img {
+            width: 100%;
+            height: 100%
+        }
+
+        .div4 {
+            grid-area: 2/2/3/3;
+        }
+
+        .div5 {
+            grid-area: 2/3/3/4;
+        }
+
+        div>img {
+            width: 100%;
+            height: 100%
+        }
+
+        
+        .footer {
+            display: grid;
+            grid-template-columns: 20% 30% 50%;
+            grid-template-rows: 100px;
+            justify-content: center;
+            align-content: center;
+            border: 2px solid wheat;
+        }
+
+        .f1 img {
+            height: 100%;
+            width: 100%;
+            padding-left: 14px;
+        }
+
+        .f2 h2 {
+            color: rgb(196, 119, 26);
+
+        }
+
+        .f2 img {
+            height: 40px;
+            width: 40px;
+
+
+        }
+
+        .f2 table {
+            padding-top: 16px;
+            padding-left: 128px;
+        }
+
+        .f3 img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .f3 table {
+            
+            padding-left: 400px;
+        }
+        .div4 h1{
+            padding-top: 150px;
+            padding-left: 50px;
+            font-style: italic;
+            
+        }
+        .div4 h1:hover{
+            color: rgb(225, 109, 14);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'C:\Users\lenovo t 480s\Desktop\madrid\madrid\common\static\images\logo3.png' %}"
+                alt="">
+        </div>
+        <div class="links">
+            <a href="{% url 'common:stores' %}">store</a>
+            <a href="{% url 'common:players' %}">players</a>
+            <a href="#">madridistas</a>
+            <a href="#">fixtures</a>
+        </div>
+
+    </header>
+
+    <div class="body">
+        <div class="div1" style="border: 2px solid wheat; border-right: none;"><img src="{% static 'images/ben.png' %}"
+                alt=""></div>
+        <div class="div2" style="border: 2px solid wheat;"><img src="{% static 'images/cortua.jpg' %}" alt=""></div>
+        <!-- <div class="div3"><img src="{% static 'images/skin.jpg' %}" alt=""></div> -->
+        <div class="div4">
+            <h1>next match ></h1>
+        </div>
+        <div class="div5"><img src="{% static 'images/barca.webp' %}" alt=""></div>
+
+
+
+    </div>
+    
+       
+        <div class="footer"> 
+        <div class="f1"><img src="{% static 'images/footerlogo.svg' %}" alt=""></div>
+        <div class="f2">
+            <table>
+                <tr>
+                    <th>follow us on</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'images/insta.png' %}" alt="">
+                        <img src="{% static 'images/fb.png' %}" alt="">
+                        <img src="{% static 'images/twit.png' %}" alt="">
+                        </dh>
+                </tr>
+            </table>
+        </div>
+        <div class="f3">
+            <table cellspacing="10px" cellpadding="50px">
+                <tr>
+                    <th colspan="2">
+                        <h3><u>sponsors</u></h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'images/adidas.png' %}" alt="">
+                    </td>
+                    <td> <img src="{% static 'images/emirates.png' %}" alt="">
+                    </td>
+                    
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
